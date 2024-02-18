@@ -23,23 +23,6 @@ cc_prebuilt_library_shared {
 	prefer: true,
 }
 
-cc_prebuilt_library_shared {
-	name: "libwifi-hal-mtk",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libwifi-hal-mtk.so"],
-		},
-	},
-	compile_multilib: "64",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
 android_app_import {
 	name: "ImsService",
 	owner: "xiaomi",
@@ -149,18 +132,18 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-	name: "gnss-mtk",
+	name: "gnss-mediatek",
 	owner: "xiaomi",
-	src: "proprietary/vendor/etc/vintf/manifest/gnss-mtk.xml",
+	src: "proprietary/vendor/etc/vintf/manifest/gnss-mediatek.xml",
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "gnss@2.1-service-mtk",
+	name: "gnss@2.1-mtk-service",
 	owner: "xiaomi",
-	src: "proprietary/vendor/etc/vintf/manifest/gnss@2.1-service-mtk.xml",
+	src: "proprietary/vendor/etc/vintf/manifest/gnss@2.1-mtk-service.xml",
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
@@ -185,18 +168,18 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-	name: "manifest_hwcomposer",
+	name: "manifest_media_c2_V1_1_default",
 	owner: "xiaomi",
-	src: "proprietary/vendor/etc/vintf/manifest/manifest_hwcomposer.xml",
+	src: "proprietary/vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml",
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "manifest_media_c2_V1_1_default",
+	name: "vendor.xiaomi.hardware.micharge@1.0",
 	owner: "xiaomi",
-	src: "proprietary/vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml",
+	src: "proprietary/vendor/etc/vintf/manifest/vendor.xiaomi.hardware.micharge@1.0.xml",
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
